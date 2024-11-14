@@ -4,8 +4,7 @@ const parallax = {
 }
 
 function handleScroll() {
-    let backgroundOffset = window.scrollY * parallax.speed
-    parallax.element.style.top = `${backgroundOffset}px`
+    parallax.element.style.top = `${window.scrollY * parallax.speed}px`
 }
 
 window.addEventListener('scroll', handleScroll)
