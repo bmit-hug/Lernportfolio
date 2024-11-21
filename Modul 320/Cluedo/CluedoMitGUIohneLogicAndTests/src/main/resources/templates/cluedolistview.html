@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cluedo</title>
+    <link rel="stylesheet" href="css/mvp.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Cluedo the game:</h1>
+        </header>
+        <section>
+            <aside>
+                <h2>The persons</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Nr</th>
+                        <th>Name</th>
+                        <th>Form of address</th>
+                        <th>Haircolor</th>
+                        <th>Age</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="person : ${persons}">
+                        <!-- https://stackoverflow.com/questions/38367339/thymeleaf-how-to-loop-a-list-by-index -->
+                        <td th:text="${personStat.index}"></td>
+                        <td th:text="${person.name}"></td>
+                        <td th:text="${person.formOfAddress}"></td>
+                        <td th:text="${person.hairColor}"></td>
+                        <td th:text="${person.age}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </aside>
+            <aside>
+                <h2>The weapons</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Nr</th>
+                        <th>Description</th>
+                        <th>Material</th>
+                        <th>Weight</th>
+                        <th>Length</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="weapon : ${weapons}">
+                        <td th:text="${weaponStat.index}"></td>
+                        <td th:text="${weapon.description}"></td>
+                        <td th:text="${weapon.material}"></td>
+                        <td th:text="${weapon.weight}"></td>
+                        <td th:text="${weapon.length}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </aside>
+            <aside>
+                <h2>The rooms</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Nr</th>
+                        <th>Description</th>
+                        <th>Floor cover</th>
+                        <th>Number of doors</th>
+                        <th>Area</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="room : ${rooms}">
+                        <td th:text="${roomStat.index}"></td>
+                        <td th:text="${room.description}"></td>
+                        <td th:text="${room.floorCover}"></td>
+                        <td th:text="${room.numberOfDoors}"></td>
+                        <td th:text="${room.area}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </aside>
+        </section>
+        <section>
+            <form th:action="showView" method="post">
+                <h2>Your crime suggestion</h2>
+                <label>crime actor</label>
+                <input type="number" th:field="${crime.actor}"/>
+
+                <label>crime weapon</label>
+                <input type="number" th:field="${crime.weapon}"/>
+
+                <label>crime scene</label>
+                <input type="number" th:field="${crime.scene}"/>
+                <input type="submit" value="Evaluate" name="submit"/>
+                <input type="submit" value="New" name="submit"/>
+            </form>
+            <form >
+                <h2>Suggestion history</h2>
+                <ul th:each="entry : ${history}">
+                    <li th:text="${entry}"/>
+                </ul>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <p>
+            <small>(c) P.Rutschmann</small>
+        </p>
+    </footer>
+</body>
+</html>

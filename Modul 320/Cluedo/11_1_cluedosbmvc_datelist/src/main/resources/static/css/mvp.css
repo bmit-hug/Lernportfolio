@@ -259,6 +259,11 @@ table {
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.75);
 }
 
+.pip {
+    background: black;
+    box-shadow: 0 0 5vw 5vw var(--shadow-color);
+}
+
 /* Keyframes */
 @keyframes titleFadeIn {
     from {

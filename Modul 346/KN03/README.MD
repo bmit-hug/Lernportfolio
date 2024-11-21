@@ -1,12 +1,13 @@
-# KN02
+# KN03
 
 ## Aufgabe A
 
 [Yaml Datei](/KN03/cloud-init.yaml)
 
-***
+---
 
 ## Aufgabe B
+
 Versuche der Anmeldung mit allen Keys:
 [](/KN03/screenshots/cloud-init.png)
 
@@ -16,5 +17,4 @@ Details der Instanz:
 cloud-init-output.log::
 [](/KN03/screenshots/cloud-init-output.png)
 
-***
-
+---
