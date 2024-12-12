@@ -9,24 +9,24 @@
 ## Aufgabe B
 
 Versuche der Anmeldung mit allen Keys:
-[](/KN03/screenshots/cloud-init.png)
+<br><img src="./screenshots/cloud-init.png" width="500px" height="auto">
 
 Details der Instanz:
-[](/KN03/screenshots/instance-details.png)
+<br><img src="./screenshots/instance-details.png" width="500px" height="auto">
 
-cloud-init-output.log::
-[](/KN03/screenshots/cloud-init-output.png)
+cloud-init-output.log:
+<br><img src="./screenshots/cloud-init-output.png" width="500px" height="auto">
 
 ---
 
 ## Aufgabe D
 
 **Beweisführung Datenbank-Server**
-[](/KN03/screenshots/db%20login.png)
-[](/KN03/screenshots/telnet.png)
+<br><img src="./screenshots/db-login.png" width="500px" height="auto">
+<br><img src="./screenshots/telnet.png" width="500px" height="auto">
 
 **Beweisführung Webserver**
-[](/KN03/screenshots/index.html.png)
-[](/KN03/screenshots/info.php.png)
-[](/KN03/screenshots/db.php.png)
-[](/KN03/screenshots/adminer.png)
+<br><img src="./screenshots/telnet.png" width="500px" height="auto">
+<br><img src="./screenshots/index.html.png" width="500px" height="auto">
+<br><img src="./screenshots/info.php.png" width="500px" height="auto">
+<br><img src="./screenshots/adminer.png" width="500px" height="auto">
