@@ -18,3 +18,15 @@ cloud-init-output.log::
 [](/KN03/screenshots/cloud-init-output.png)
 
 ---
+
+## Aufgabe D
+
+**Beweisführung Datenbank-Server**
+[](/KN03/screenshots/db%20login.png)
+[](/KN03/screenshots/telnet.png)
+
+**Beweisführung Webserver**
+[](/KN03/screenshots/index.html.png)
+[](/KN03/screenshots/info.php.png)
+[](/KN03/screenshots/db.php.png)
+[](/KN03/screenshots/adminer.png)
