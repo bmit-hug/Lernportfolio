@@ -1,0 +1,45 @@
+#cloud-config
+users:
+    - name: ubuntu
+      sudo: ALL=(ALL) NOPASSWD:ALL
+      groups: users, admin
+      home: /home/ubuntu
+      shell: /bin/bash
+      ssh_authorized_keys:
+          - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD1Ja9kgnwTKWNHfZJc0YClBVJ5hISO5LJs1DXFXAaIqrVxN5eWwOITz5+GPHr3N60vjAp1DoLzHWK4C+Ajk2eoJF7VAD1HQHgIG1gs/k4t+IhHb2sqo0Lt2eSPN8noJciNgSiXSaVJ23swNRKO/pvjJUg7bjv+Pe6xbeaCmt2lI2OREF6wI16e/NGB17OirTie7UiJUCMEhaGIBkZI2c4xWUdpGHg3zV3xGrqoVXTyBPtQtBYG7KsTox9camt0bnEPfVfI+RbG3JAfKTxSVQraTWJGm1r4poD8jVpxmV5s82ld8VRLXhnaNZoH+33QeVdBm2BFn7TwtJ9x7KL7/ZQ9 aws-key
+ssh_pwauth: false
+disable_root: false
+package_update: true
+packages:
+    - apache2
+    - curl
+    - wget
+    - php
+    - libapache2-mod-php
+write_files:
+    - content: |
+          <?php
+          $ihrname = "Lorenzo Hug";
+          $imgSrc = "https://unsplash.com/photos/closeup-photography-of-brown-and-gray-concrete-bricks-cnEzFsV4Y-k";
+          $imgUrl = "https://lorenzobuckettest.s3.us-east-1.amazonaws.com/annie-spratt-cnEzFsV4Y-k-unsplash.jpg?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEK%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDrZmO0Ss2fdWCKRxOoTlDcI1yw9vFUheXynf5jnMfiqQIgLsjdNz74ORNea7jh2SDXPipik1aBMmXA4WYaW92KpmsqxwMIdxAAGgw1NDc3ODQ5MTIxMjIiDAceS02ImnMadNXeMCqkA1Boohl6m7EYxm%2B7sYu1hG%2Fd7VIGFcTEDzxP3bXreckzGwbTLanmNvPalXl%2BiuqJooy1YNyo3hG9y%2Fag%2F1G9DlYbh5l9Ya9j0TVr3jKChCG8aVIWQeuUiuEqNOpN168GRJ3Hf4eGVT8NdLg7%2FCeH3QHKU1XbHULo1WrBRzf6Szintu3U7lnE2xVuKElrfiY1pet5MBdvAQeG%2ByDXH2bLmn9e8HS6QjIQ3VPbiABpqZprTdnFTZyI8%2FijS2nTR0N6VhLd4wuPMmoccahaxVZ6eaUqpRfUE6Ld3mCwbH44C2Um5W0rDpAuqmgEsMnmuHH0RgeUGF1NzlYEiMr7H%2F5%2FGhwUfIhRgtPcSqve6A1wz1uQvc8dDYOaHngum9TbJjB8794CccFeROdjADe8Za7Y8JqkH54llaAZhHfQUtV%2Bh5oXvw4vVekRoy0iPZNlR3I2hB0OKhW3YIk%2FcpWJv3aNZPccjr3uFblqz45vM%2FXfZMjPKZ4CU0o3QhfMbMYgR45GNcCsbikTdRP8dJMKgDk1TAvpWAcWJjTZ2%2BOVvYG%2ByUD7lGN1PjDgtJC7Bjq3AiumSakL4WocJyAT55YoMKdS8naa8jutkoaR1Xmh0DaGPNTFW25w8S0pLznafFHL4Nu7C4GphvUJB%2F8x8i6cVq37rH2zh%2FPGW%2FDqhpRPNwSIrIE8eWSozV2qJJofimEhvS8d854cHAqFYNwQxdk9o9%2BJZs%2FPNbMbEirS4tKsxU7diWcuAuXX9aUw9y2MdK2Syzxp3dpUTK1TgLIAlMiiRzmGYI%2FTLdudTNV0mP15P3w4mdBclJoBm%2BMqcIAS0xYM328C4wF7foXYdow4rmaP8rH0Ej3FpPz5wWKfm0LeqBrdSe%2B%2BzQUEJo2Rlutv85MLEjftcUNq9tKAd33emAxZ3ZQ%2BWTY0SPyxGjPzehcGSIYRKN32hWE4%2BMkGvx9Ypl0rrAv3%2FEz4rhkAPy6D%2FBhZNO6l7rDPO5Nr&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAX7CUGNT5P2VWDC6N%2F20241219%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241219T141725Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=332c4f5e8ab576f9035c9faf48bd62cf422b7c83ccd447b23c7fa0d1726ee9b6";
+          ?>
+
+          <!DOCTYPE html>
+          <html lang="en">
+
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title><?php echo $ihrname; ?></title>
+          </head>
+
+          <body>
+              <h1>Ziegelwand</h1>
+              <br />
+              <img src="<?php echo $imgUrl; ?>" alt="Bild" style="max-width: 100%; height: auto;" />
+              <p>Quelle: <?php echo $imgSrc; ?></p>
+          </body>
+
+          </html>
+      path: /var/www/html/image.php
+      permissions: "0644"
