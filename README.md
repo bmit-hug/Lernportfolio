@@ -10,7 +10,7 @@ Welcome to my Lernportfolio repository! This repository contains all the work I 
 -   **[Modul 322](./Modul%20322/)**: Design and implement user interfaces
 -   **[Modul 346](./Modul%20346/)**: Design and implement cloud solutions
 -   **[Modul 426](./Modul%20426/)**: Software mit agilen Methoden entwickeln
--   **[Modul 431](./Modul%20431/)**: Aufträge im eigenen Berufsumfeld selbstständig durchführen
+-   **[Modul 431](./Modul%20431/)**: Carry out assignments independently in your own professional environment
 
 ## Purpose
 
