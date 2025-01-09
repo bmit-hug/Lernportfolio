@@ -20,11 +20,24 @@
 
 ![](./screenshots/Screenshot%202024-12-19%20152347.png)
 
+---
+
 ## Aufgabe C
 
-ssh -i "C:\Users\sibby\OneDrive - BSFH Berufsfachschule\BSFH\Informatik\Lernportfolio\Modul 346\keys\private\testulus.pem" ubuntu@172.31.92.252
+**Liste der Disks:**
 
-uuid: 6a0ef0a3-6f52-47e2-a2c0-6eb407bd6ab0
+![Liste der Disks](./screenshots/Screenshot%202025-01-09%20151647.png)
 
-UUID=6a0ef0a3-6f52-47e2-a2c0-6eb407bd6ab0 /mnt/newvolume ext4 defaults 0 2
+---
 
+## Aufgabe D
+
+**Screenshots der Tags**
+
+![](./screenshots/Screenshot%202025-01-09%20152144.png)
+
+![](./screenshots/Screenshot%202025-01-09%20152245.png)
+
+![](./screenshots/Screenshot%202025-01-09%20152249.png)
+
+---
