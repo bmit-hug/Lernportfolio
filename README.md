@@ -4,13 +4,13 @@ Welcome to my Lernportfolio repository! This repository contains all the work I 
 
 ## Contents
 
--   **Modul 122**: Automate processes with a scripting language
--   **Modul 231**: Apply data protection and data security
--   **Modul 320**: Object-oriented programming
--   **Modul 322**: Design and implement user interfaces
--   **Modul 346**: Design and implement cloud solutions
--   **Modul 426**: Software mit agilen Methoden entwickeln
--   **Modul 431**: Aufträge im eigenen Berufsumfeld selbstständig durchführen
+-   **[Modul 122](./Modul%20122/)**: Automate processes with a scripting language
+-   **[Modul 231](./Modul%20231/)**: Apply data protection and data security
+-   **[Modul 320](./Modul%20320/)**: Object-oriented programming
+-   **[Modul 322](./Modul%20322/)**: Design and implement user interfaces
+-   **[Modul 346](./Modul%20346/)**: Design and implement cloud solutions
+-   **[Modul 426](./Modul%20426/)**: Software mit agilen Methoden entwickeln
+-   **[Modul 431](./Modul%20431/)**: Aufträge im eigenen Berufsumfeld selbstständig durchführen
 
 ## Purpose
 
