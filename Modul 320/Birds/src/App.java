@@ -1,31 +1,39 @@
 
+import java.util.List;
+
 public class App {
 
     public static void main(String[] args) throws Exception {
-        Vogel markus = new Vogel("Markus", "blau");
-        Huhn tom = new Huhn("Tom", "rot");
-        Ente andy = new Ente("Andy", "gelb");
 
-        printEverything(markus, tom, andy);
+        List<Vogel> vogelList = List.of(
+                new Vogel("Markus", "blau"),
+                new Huhn("Tom", "rot"),
+                new Ente("Andy", "gelb")
+        );
+
+        printEverything(vogelList);
     }
 
-    public static void printEverything(Vogel markus, Huhn tom, Ente andy) {
-        System.out.println();
+    private static void printEverything(List<Vogel> vogelList) {
 
-        markus.fliegen();
-        markus.flattern();
+        for (Vogel vogel : vogelList) {
 
-        System.out.println();
+            System.out.println();
+            vogel.fliegen();
+            vogel.flattern();
 
-        tom.fliegen();
-        tom.flattern();
+            switch (vogel) {
+                case Ente ente ->
+                    ente.schwimmen();
 
-        System.out.println();
+                case Huhn huhn ->
+                    huhn.gackern();
 
-        andy.fliegen();
-        andy.flattern();
-        andy.schwimmen();
+                default -> {
+                }
+            }
 
-        System.out.println();
+            System.out.println();
+        }
     }
 }

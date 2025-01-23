@@ -1,17 +1,21 @@
 
 public class Huhn extends Vogel {
 
-    public Huhn(String name, String farbe) {
+    protected Huhn(String name, String farbe) {
         super(name, farbe);
     }
 
     @Override
-    public void fliegen() {
+    protected void fliegen() {
         System.out.println("Das Huhn " + name + " fliegt nicht");
     }
 
     @Override
-    public void flattern() {
+    protected void flattern() {
         System.out.println("Das Huhn " + name + " flattert mit seinen " + farbe + "en Flügeln");
+    }
+
+    protected void gackern() {
+        System.out.println("Das Huhn " + name + " gackert");
     }
 }
