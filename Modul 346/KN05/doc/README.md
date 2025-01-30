@@ -2,7 +2,7 @@
 
 ## Aufgabe A
 
-![](./screenshots/Frame.svg)
+![](../screenshots/Frame.svg)
 
 ---
 
@@ -16,4 +16,3 @@
 ---
 
 ## Aufgabe C
-

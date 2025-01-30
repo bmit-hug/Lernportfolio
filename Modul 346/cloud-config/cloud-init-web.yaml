@@ -6,7 +6,7 @@ users:
       home: /home/ubuntu
       shell: /bin/bash
       ssh_authorized_keys:
-          - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD1Ja9kgnwTKWNHfZJc0YClBVJ5hISO5LJs1DXFXAaIqrVxN5eWwOITz5+GPHr3N60vjAp1DoLzHWK4C+Ajk2eoJF7VAD1HQHgIG1gs/k4t+IhHb2sqo0Lt2eSPN8noJciNgSiXSaVJ23swNRKO/pvjJUg7bjv+Pe6xbeaCmt2lI2OREF6wI16e/NGB17OirTie7UiJUCMEhaGIBkZI2c4xWUdpGHg3zV3xGrqoVXTyBPtQtBYG7KsTox9camt0bnEPfVfI+RbG3JAfKTxSVQraTWJGm1r4poD8jVpxmV5s82ld8VRLXhnaNZoH+33QeVdBm2BFn7TwtJ9x7KL7/ZQ9 aws-key
+          - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIx3fNrTxxDvt9xa2Yz+o0E8xA+MG9JNuzueTFkjK8cDPcDMcFDCJJKYPdM5V0/AYrxTXyHIyYHac88FzdK3wzpT8Whm46UV9BMPG6zU49Fq0xVEVTuiPjI/6KEQTq3jL2mQjGvLmAopnz5njuCkqD969VTbJiB1tH0zEx9xQFgPT9/flt9HVBFJLo5sy+7PmtZvn9XanewtrSyKQ+F5E9FejJ4lF/alHjYySgcJuBk6t/u7ASKz+xRCkGkgqt6d3FaHuM4EqmDkwt5gn1EgKlkpbT1YnymIliOQb9fS2YZTkE6i36fmscirm9xo+o22qfwVqqAYwnZy11xrSnaI2J aws-key
 ssh_pwauth: false
 disable_root: false
 package_update: true
@@ -25,12 +25,13 @@ write_files:
       permissions: "0644"
     - content: |
           <?php
-            $servername = "172.31.17.0";
+            $servername = "54.144.199.39";
             $username = "admin";
             $password = "password";
             $dbname = "mysql";
             $conn = new mysqli($servername, $username, $password, $dbname);
             if ($conn->connect_error) {
+              echo "Connection failed";
               die("Connection failed: " . $conn->connect_error);
             }
             $sql = "select Host, User from mysql.user;";
